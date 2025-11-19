@@ -1,0 +1,42 @@
+:host { display: block; margin: 8px 0; }
+
+.bubble {
+  max-width: 78%;
+  padding: 10px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: var(--shadow);
+  transition: transform .14s ease, box-shadow .14s ease;
+  outline: none;
+}
+.bubble:focus { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(0,0,0,0.12); }
+
+.bubble.user {
+  margin-left: auto;
+  background: #ffffff;
+  border: 1px solid rgba(61,44,63,0.06);
+  color: var(--text);
+}
+
+.bubble.bot {
+  margin-right: auto;
+  background: var(--bubble-ai-gradient);
+  color: #2f1b2f;
+  border: none;
+}
+
+.bubble-inner { padding: 6px 8px; }
+
+.bubble-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 15px;
+}
+
+.bubble-time {
+  display:block;
+  font-size: 11px;
+  opacity: 0.7;
+  margin-top: 6px;
+  text-align: right;
+}

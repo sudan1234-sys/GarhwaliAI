@@ -1,0 +1,15 @@
+
+<article
+  class="bubble"
+  role="article"
+  [class.user]="isUser()"
+  [class.bot]="!isUser()"
+  tabindex="0"
+  [attr.aria-label]="isUser() ? 'You — ' + formattedTime() : 'Assistant — ' + formattedTime()"
+
+>
+  <div class="bubble-inner">
+    <div class="bubble-text">{{ msg().text }}</div>
+    <time class="bubble-time" [attr.datetime]="msg().timestamp">{{ formattedTime() }}</time>
+  </div>
+</article>
